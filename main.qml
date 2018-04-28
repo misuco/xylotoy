@@ -1,51 +1,28 @@
 import QtQuick 2.6
 import QtQuick.Window 2.2
 
-Window {
-    id: root
+import "lib/misulib/qml/playfield"
 
-    property int fieldWidth: root.width / app.nPlayFields
+Window {
+    property int buttonRadius: 0
+    property int borderWidth: 0
+    property color borderColor: "#333333"
+    property color fgColor: "#CCCCCC"
+    property color bgColor: "#CCCCCC"
+
+    id: root
 
     visible: true
     width: 640
     height: 480
+    color: bgColor
 
-    Row {
-        Repeater {
-            model: app.playFields
-
-            Rectangle {
-                color: modelData.color
-                width: root.fieldWidth
-                height: root.height
-
-                MultiPointTouchArea {
-                    anchors.fill: parent
-
-                    onPressed: {
-                        if(touchPoints.length === 1) {
-                            modelData.onPressed()
-                        }
-                    }
-
-                    onCanceled: {
-                        if(touchPoints.length === 1) {
-                            modelData.onReleased()
-                        }
-                    }
-
-                    onReleased: {
-                        if(touchPoints.length === 1) {
-                            modelData.onReleased()
-                        }
-                    }
-
-                    onGestureStarted: {
-                        gesture.grab();
-                    }
-                }
-            }
-        }
+    PlayArea {
+        id: playAreaRow
+        visible: true
+        controller: app.playArea
+        anchors.fill: parent
     }
+
 }
 

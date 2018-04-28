@@ -26,11 +26,13 @@ SOURCES += main.cpp \
     lib/mobilesynth/mobilesynthqt52.cpp \
     lib/mobilesynth/mobilesynthViewControllerRc1.mm \
     app/xylotoy.cpp \
-    app/playfield.cpp \
     lib/misulib/comm/sendermobilesynth.cpp \
     lib/misulib/comm/libofqf/qoscserver.cpp \
     lib/misulib/comm/libofqf/qosctypes.cpp \
-    lib/misulib/models/freqtriple.cpp
+    lib/misulib/models/freqtriple.cpp \
+    lib/misulib/widgets/core/playarea.cpp \
+    lib/misulib/models/playfield.cpp \
+    lib/misulib/comm/mastersender.cpp
 
 RESOURCES += qml.qrc
 
@@ -60,13 +62,15 @@ HEADERS += \
     lib/mobilesynth/mobilesynthViewControllerRc1.h \
     lib/mobilesynth/mobilesynthviewcontrollerrc1.hpp \
     app/xylotoy.h \
-    app/playfield.h \
     lib/misulib/comm/isender.h \
     lib/misulib/comm/sendermobilesynth.h \
     lib/misulib/comm/libofqf/qoscserver.h \
     lib/misulib/comm/libofqf/qoscserverinterface.h \
     lib/misulib/comm/libofqf/qosctypes.h \
-    lib/misulib/models/freqtriple.h
+    lib/misulib/models/freqtriple.h \
+    lib/misulib/widgets/core/playarea.h \
+    lib/misulib/models/playfield.h \
+    lib/misulib/comm/mastersender.h
 
 DISTFILES += \
     lib/mobilesynth/AudioOutput.m

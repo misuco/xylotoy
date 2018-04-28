@@ -1,6 +1,12 @@
-<!DOCTYPE RCC>
-<RCC version="1.0">
+<RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>lib/misulib/qml/playfield/PlayArea.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldBendHori.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldBendVertBot.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldBendVertHorizBot.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldBendVertHorizTop.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldBendVertTop.qml</file>
+        <file>lib/misulib/qml/playfield/PlayFieldNormal.qml</file>
     </qresource>
 </RCC>
