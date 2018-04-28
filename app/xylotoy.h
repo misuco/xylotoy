@@ -16,12 +16,14 @@ public:
     explicit Xylotoy(QObject *parent = nullptr);
 
 public slots:
-    void onOscData(QString path, QList<QVariant> data);
+    void onOscData(QString path, QList<QVariant> data, QHostAddress src_adr, quint16 src_port);
 
 private:
     PlayArea *      _playArea;
     MasterSender *  _out;
     QOscServer *    _in;
+    QList<bool>     _scale;
+    int             _receivedScaleId;
 
 };
 
