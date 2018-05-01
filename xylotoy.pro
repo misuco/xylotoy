@@ -24,7 +24,6 @@ SOURCES += main.cpp \
     lib/mobilesynth/synth/oscillator.cpp \
     lib/mobilesynth/synth/parameter.cpp \
     lib/mobilesynth/mobilesynthqt52.cpp \
-    lib/mobilesynth/mobilesynthViewControllerRc1.mm \
     app/xylotoy.cpp \
     lib/misulib/comm/sendermobilesynth.cpp \
     lib/misulib/comm/libofqf/qoscserver.cpp \
@@ -72,5 +71,6 @@ HEADERS += \
     lib/misulib/models/playfield.h \
     lib/misulib/comm/mastersender.h
 
-DISTFILES += \
-    lib/mobilesynth/AudioOutput.m
+OBJECTIVE_SOURCES += \
+    lib/mobilesynth/mobilesynthViewControllerRc1.mm \
+    lib/mobilesynth/AudioOutput.m \
