@@ -8,5 +8,6 @@
         <file>lib/misulib/qml/playfield/PlayFieldBendVertHorizTop.qml</file>
         <file>lib/misulib/qml/playfield/PlayFieldBendVertTop.qml</file>
         <file>lib/misulib/qml/playfield/PlayFieldNormal.qml</file>
+        <file>lib/misulib/qml/playfield/Bubbles.qml</file>
     </qresource>
 </RCC>

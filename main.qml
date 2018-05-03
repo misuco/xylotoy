@@ -24,5 +24,9 @@ Window {
         anchors.fill: parent
     }
 
+    Bubbles {
+        anchors.fill: parent
+        model: app.touchHistory.events
+    }
 }
 

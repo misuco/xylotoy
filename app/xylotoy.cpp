@@ -2,14 +2,15 @@
 #include "lib/misulib/comm/sendermobilesynth.h"
 
 Xylotoy::Xylotoy(QObject *parent) : QObject(parent),
-    _out(new MasterSender()),
+    _out(new MasterSender(this)),
+    _touchHistory(new TouchHistory(this)),
+    _playArea(new PlayArea(_out, _touchHistory, this)),
     _in(new QOscServer(3150,this)),
     _receivedScaleId(0)
 {
     _out->addSender(new SenderMobileSynth());
     connect(_in,SIGNAL(oscData(QString,QList<QVariant>,QHostAddress,quint16)),this,SLOT(onOscData(QString,QList<QVariant>,QHostAddress,quint16)));
 
-    _playArea = new PlayArea(_out, this);
     _scale.append(false);
     _scale.append(true);
     _scale.append(false);

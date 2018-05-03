@@ -31,7 +31,9 @@ SOURCES += main.cpp \
     lib/misulib/models/freqtriple.cpp \
     lib/misulib/widgets/core/playarea.cpp \
     lib/misulib/models/playfield.cpp \
-    lib/misulib/comm/mastersender.cpp
+    lib/misulib/comm/mastersender.cpp \
+    lib/misulib/widgets/core/touchhistory.cpp \
+    lib/misulib/models/touchhistoryevent.cpp
 
 RESOURCES += qml.qrc
 
@@ -69,7 +71,9 @@ HEADERS += \
     lib/misulib/models/freqtriple.h \
     lib/misulib/widgets/core/playarea.h \
     lib/misulib/models/playfield.h \
-    lib/misulib/comm/mastersender.h
+    lib/misulib/comm/mastersender.h \
+    lib/misulib/widgets/core/touchhistory.h \
+    lib/misulib/models/touchhistoryevent.h
 
 OBJECTIVE_SOURCES += \
     lib/mobilesynth/mobilesynthViewControllerRc1.mm \
