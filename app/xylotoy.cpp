@@ -8,7 +8,7 @@ Xylotoy::Xylotoy(QObject *parent) : QObject(parent),
     _in(new QOscServer(3150,this)),
     _receivedScaleId(0)
 {
-    _out->addSender(new SenderMobileSynth());
+    _out->addSenderThread(new SenderMobileSynth());
     connect(_in,SIGNAL(oscData(QString,QList<QVariant>,QHostAddress,quint16)),this,SLOT(onOscData(QString,QList<QVariant>,QHostAddress,quint16)));
 
     _scale.append(false);

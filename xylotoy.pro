@@ -33,7 +33,8 @@ SOURCES += main.cpp \
     lib/misulib/models/playfield.cpp \
     lib/misulib/comm/mastersender.cpp \
     lib/misulib/widgets/core/touchhistory.cpp \
-    lib/misulib/models/touchhistoryevent.cpp
+    lib/misulib/models/touchhistoryevent.cpp \
+    lib/misulib/comm/senderthread.cpp
 
 RESOURCES += qml.qrc
 
@@ -58,10 +59,7 @@ HEADERS += \
     lib/mobilesynth/synth/oscillator.h \
     lib/mobilesynth/synth/parameter.h \
     lib/mobilesynth/synth/test_util.h \
-    lib/mobilesynth/AudioOutput.h \
     lib/mobilesynth/mobilesynthqt52.h \
-    lib/mobilesynth/mobilesynthViewControllerRc1.h \
-    lib/mobilesynth/mobilesynthviewcontrollerrc1.hpp \
     app/xylotoy.h \
     lib/misulib/comm/isender.h \
     lib/misulib/comm/sendermobilesynth.h \
@@ -73,8 +71,19 @@ HEADERS += \
     lib/misulib/models/playfield.h \
     lib/misulib/comm/mastersender.h \
     lib/misulib/widgets/core/touchhistory.h \
-    lib/misulib/models/touchhistoryevent.h
+    lib/misulib/models/touchhistoryevent.h \
+    lib/misulib/comm/senderthread.h \
+    lib/mobilesynth/mobilesynthviewcontrollerrc1.hpp \
+    lib/mobilesynth/mobilesynthViewControllerRc1.h \
+    lib/mobilesynth/AudioOutput.h
 
 OBJECTIVE_SOURCES += \
-    lib/mobilesynth/mobilesynthViewControllerRc1.mm \
-    lib/mobilesynth/AudioOutput.m \
+    lib/mobilesynth/mobilesynthViewControllerRc1.mm\
+    lib/mobilesynth/AudioOutput.m
+
+DISTFILES += \
+    ios/Info.plist
+
+ios {
+    QMAKE_INFO_PLIST = ios/Info.plist
+}
